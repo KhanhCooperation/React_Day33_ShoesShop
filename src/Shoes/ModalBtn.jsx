@@ -1,8 +1,7 @@
 import React from "react";
 
 export default function Modal(props) {
-  const { data } = props;
-  const [showModal, setShowModal] = React.useState(false);
+  const { data, ShoesList, showModal, setShowModal } = props;
   return (
     <>
       <button
@@ -33,24 +32,24 @@ export default function Modal(props) {
                 {/*body*/}
                 <div className="relative p-6 grid grid-cols-3">
                   <div className="col-span-1">
-                    <img src={data[0].image} alt="" />
+                    <img src={ShoesList.image} alt="" />
                   </div>
                   <div className="col-span-2 flex flex-col gap-3 justify-center">
                     <p>
                       <bold className="font-bold">Tên sp: </bold>
-                      {data[0].name}
+                      {ShoesList.name}
                     </p>
                     <p>
                       <bold className="font-bold">Giá: </bold>
-                      {data[0].price}
+                      {ShoesList.price}
                     </p>
                     <p>
                       <bold className="font-bold">Mô tả: </bold>{" "}
-                      {data[0].description}
+                      {ShoesList.description}
                     </p>
                     <p>
                       <bold className="font-bold">Số lượng: </bold>
-                      {data[0].quantity}
+                      {ShoesList.quantity}
                     </p>
                   </div>
                 </div>
